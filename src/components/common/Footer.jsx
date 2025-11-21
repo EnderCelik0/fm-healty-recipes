@@ -1,3 +1,3 @@
 export default function Footer() {
-	return <div>Footer414124 !</div>;
+	return <footer>Footer414124 !</footer>;
 }

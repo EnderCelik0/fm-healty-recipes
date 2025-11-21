@@ -21,34 +21,34 @@ export default function Navbar() {
 	];
 
 	return (
-		<nav className='flex justify-between px-15 py-5 items-center'>
-			<div>
-				{' '}
+		<nav className='bottom-b border border-neutral-300'>
+			<div className='flex justify-between px-15 py-5 items-center bottom-b-1'>
 				<img
-					src='/images/logo.svg'
+					src='/assets/images/logo.svg'
 					alt='brand-website-logo'
 				/>
-			</div>
-			<ul className='flex gap-10'>
-				{links.map(({ id, name, to }) => (
-					<li
-						key={id}
-						className='relative'
-					>
-						<NavLink
-							to={to}
-							className={({ isActive }) =>
-								isActive
-									? 'before:absolute before:-bottom-2 before:w-full  before:h-1 before:rounded-10 before:bg-orange-500  before:left-0 before:scale-x-100 transition-transform duration-200'
-									: 'scale-x-0'
-							}
+				<ul className='flex gap-10'>
+					{links.map(({ id, name, to }) => (
+						<li
+							key={id}
+							className='relative'
 						>
-							{name}
-						</NavLink>
-					</li>
-				))}
-			</ul>
-			<Button>Browse Recipes</Button>
+							<NavLink
+								to={to}
+								className={({ isActive }) =>
+									// create orange underline if nav link is active
+									isActive
+										? 'before:absolute before:-bottom-2 before:w-full  before:h-1 before:rounded-10 before:bg-orange-500  before:left-0  transition-transform duration-200'
+										: ''
+								}
+							>
+								{name}
+							</NavLink>
+						</li>
+					))}
+				</ul>
+				<Button>Browse Recipes</Button>
+			</div>
 		</nav>
 	);
 }

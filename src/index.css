@@ -1,179 +1,179 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
-	--color-*: initial;
+  --color-*: initial;
 
-	/* Colors - Neutral */
-	--color-neutral-0: #ffffff;
-	--color-neutral-100: #f6f5f1;
-	--color-neutral-200: #e0e6e3;
-	--color-neutral-300: #d0dcd9;
-	--color-neutral-800: #395852;
-	--color-neutral-900: #163a34;
+  /* Colors - Neutral */
+  --color-neutral-0: #ffffff;
+  --color-neutral-100: #f6f5f1;
+  --color-neutral-200: #e0e6e3;
+  --color-neutral-300: #d0dcd9;
+  --color-neutral-600: #395852;
+  --color-neutral-900: #163a34;
 
-	/* Colors - Orange */
-	--color-orange-500: #fe9f6b;
+  /* Colors - Orange */
+  --color-orange-500: #fe9f6b;
 
-	/* Colors - Teal */
-	--color-teal-500: #49ac9b;
+  /* Colors - Teal */
+  --color-teal-500: #49ac9b;
 
-	/* Colors - Indigo */
-	--color-indigo-500: #697ddb;
+  /* Colors - Indigo */
+  --color-indigo-500: #697ddb;
 
-	/* Custom Spacing */
-	--spacing-0: 0px;
-	--spacing-25: 2px;
-	--spacing-50: 4px;
-	--spacing-75: 6px;
-	--spacing-100: 8px;
-	--spacing-125: 10px;
-	--spacing-150: 12px;
-	--spacing-200: 16px;
-	--spacing-250: 20px;
-	--spacing-300: 24px;
-	--spacing-400: 32px;
-	--spacing-500: 40px;
-	--spacing-600: 48px;
-	--spacing-800: 64px;
-	--spacing-1000: 80px;
-	--spacing-1200: 96px;
-	--spacing-1400: 112px;
-	--spacing-1600: 128px;
-	--spacing-1800: 140px;
+  /* Custom Spacing */
+  --spacing-0: 0px;
+  --spacing-25: 2px;
+  --spacing-50: 4px;
+  --spacing-75: 6px;
+  --spacing-100: 8px;
+  --spacing-125: 10px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+  --spacing-1200: 96px;
+  --spacing-1400: 112px;
+  --spacing-1600: 128px;
+  --spacing-1800: 140px;
 
-	/* Custom Radius */
-	--radius-*: initial;
-	--radius-0: 0px;
-	--radius-4: 4px;
-	--radius-6: 6px;
-	--radius-8: 8px;
-	--radius-10: 10px;
-	--radius-12: 12px;
-	--radius-16: 16px;
-	--radius-20: 20px;
-	--radius-24: 24px;
-	--radius-full: 999px;
+  /* Custom Radius */
+  --radius-*: initial;
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-full: 999px;
 
-	--drop-shadow-btn: 0 35px 35px #000;
+  --drop-shadow-btn: 0 35px 35px #000;
 }
 
 @layer components {
-	/* Typography Presets */
+  /* Typography Presets */
 
-	/* Text Preset 1 - Desktop */
-	.text-preset-1 {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 800; /* ExtraBold */
-		font-size: 72px;
-		line-height: 110%;
-		letter-spacing: -2px;
-	}
+  /* Text Preset 1 - Desktop */
+  .text-preset-1 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 72px;
+    line-height: 110%;
+    letter-spacing: -2px;
+  }
 
-	/* Text Preset 1 - Tablet */
-	.text-preset-1-tablet {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 800; /* ExtraBold */
-		font-size: 64px;
-		line-height: 110%;
-		letter-spacing: -2px;
-	}
+  /* Text Preset 1 - Tablet */
+  .text-preset-1-tablet {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 64px;
+    line-height: 110%;
+    letter-spacing: -2px;
+  }
 
-	/* Text Preset 1 - Mobile */
-	.text-preset-1-mobile {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 800; /* ExtraBold */
-		font-size: 52px;
-		line-height: 110%;
-		letter-spacing: -2px;
-	}
+  /* Text Preset 1 - Mobile */
+  .text-preset-1-mobile {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 52px;
+    line-height: 110%;
+    letter-spacing: -2px;
+  }
 
-	/* Text Preset 2 - Desktop */
-	.text-preset-2 {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 800; /* ExtraBold */
-		font-size: 48px;
-		line-height: 120%;
-		letter-spacing: -2px;
-	}
+  /* Text Preset 2 - Desktop */
+  .text-preset-2 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -2px;
+  }
 
-	/* Text Preset 2 - Mobile */
-	.text-preset-2-mobile {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 800; /* ExtraBold */
-		font-size: 40px;
-		line-height: 120%;
-		letter-spacing: -2px;
-	}
+  /* Text Preset 2 - Mobile */
+  .text-preset-2-mobile {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -2px;
+  }
 
-	/* Text Preset 3 */
-	.text-preset-3 {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 700; /* Bold */
-		font-size: 32px;
-		line-height: 130%;
-		letter-spacing: -1px;
-	}
+  /* Text Preset 3 */
+  .text-preset-3 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: -1px;
+  }
 
-	/* Text Preset 4 */
-	.text-preset-4 {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 700; /* Bold */
-		font-size: 24px;
-		line-height: 130%;
-		letter-spacing: -1px;
-	}
+  /* Text Preset 4 */
+  .text-preset-4 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -1px;
+  }
 
-	/* Text Preset 5 */
-	.text-preset-5 {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 700; /* Bold */
-		font-size: 20px;
-		line-height: 140%;
-		letter-spacing: -0.5px;
-	}
+  /* Text Preset 5 */
+  .text-preset-5 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+  }
 
-	/* Text Preset 6 */
-	.text-preset-6 {
-		font-family: 'Nunito Sans', sans-serif;
-		font-weight: 500; /* Medium */
-		font-size: 20px;
-		line-height: 150%;
-		letter-spacing: -0.4px;
-	}
+  /* Text Preset 6 */
+  .text-preset-6 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500; /* Medium */
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.4px;
+  }
 
-	/* Text Preset 7 */
-	.text-preset-7 {
-		font-family: 'Nunito', sans-serif;
-		font-weight: 600; /* SemiBold */
-		font-size: 18px;
-		line-height: 150%;
-		letter-spacing: -0.3px;
-	}
+  /* Text Preset 7 */
+  .text-preset-7 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600; /* SemiBold */
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.3px;
+  }
 
-	/* Text Preset 8 */
-	.text-preset-8 {
-		font-family: 'Nunito Sans', sans-serif;
-		font-weight: 700; /* Bold */
-		font-size: 16px;
-		line-height: 150%;
-		letter-spacing: -0.3px;
-	}
+  /* Text Preset 8 */
+  .text-preset-8 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.3px;
+  }
 
-	/* Text Preset 9 */
-	.text-preset-9 {
-		font-family: 'Nunito Sans', sans-serif;
-		font-weight: 500; /* Medium */
-		font-size: 16px;
-		line-height: 150%;
-		letter-spacing: -0.3px;
-	}
+  /* Text Preset 9 */
+  .text-preset-9 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500; /* Medium */
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.3px;
+  }
 
-	/* Text Preset 10 */
-	.text-preset-10 {
-		font-family: 'Nunito Sans', sans-serif;
-		font-weight: 700; /* Bold */
-		font-size: 14px;
-		line-height: 150%;
-		letter-spacing: -0.3px;
-	}
+  /* Text Preset 10 */
+  .text-preset-10 {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: -0.3px;
+  }
 }
