@@ -1,4 +1,4 @@
-import CTACard from "../components/Home/CTACard";
+import CTACard from "../components/common/CTACard";
 import Features from "../components/Home/Features";
 import Hero from "../components/Home/Hero";
 import RealLife from "../components/Home/RealLife";
