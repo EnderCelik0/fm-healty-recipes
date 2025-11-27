@@ -1,5 +1,5 @@
 import bulletPoint from "/assets/images/icon-bullet-point.svg";
-import { Link, useNavigate, useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import recipes from "../../../recipes.json";
 import Image from "../ui/Image.jsx";
 import RecipePrepInfo from "../common/RecipePrepInfo.jsx";
@@ -71,8 +71,6 @@ function RecipeDetail() {
 function MoreRecipes() {
   const moreRecipes = [recipes[1], recipes[4], recipes[2]];
 
-  const navigate = useNavigate();
-
   return (
     <section>
       <h3 className="text-preset-3 text-neutral-900">More Recipes</h3>
@@ -87,7 +85,7 @@ function MoreRecipes() {
             cookMinutes={recipe.cookMinutes}
             prepMinutes={recipe.prepMinutes}
             servings={recipe.servings}
-            onClick={() => navigate(`/recipes/${recipe.slug}`)}
+            slug={recipe.slug}
           />
         ))}
       </div>
