@@ -10,7 +10,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="mx-auto my-10 flex w-full max-w-6xl justify-between px-8 lg:px-0">
+    <footer className="mx-auto mb-10 flex w-full max-w-6xl flex-col-reverse items-center gap-8 px-8 sm:my-10 sm:flex-row sm:justify-between lg:px-0">
       <p>Made with ❤️ and 🥑</p>
 
       <ul className="flex gap-6">

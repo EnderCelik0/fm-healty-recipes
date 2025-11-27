@@ -1,11 +1,11 @@
-import Image from "../common/Image";
+import Image from "../ui/Image";
 import BeyondPlateLg from "/assets/images/image-about-beyond-the-plate-large.webp";
 import BeyondPlateSm from "/assets/images/image-about-beyond-the-plate-small.webp";
 
 export default function BeyondPlate() {
   return (
     <section className="grid grid-cols-1 items-center gap-10 py-24 md:gap-16 lg:grid-cols-2">
-      <div className="space-y-5 ">
+      <div className="space-y-5">
         <h2 className="text-preset-2 text-neutral-900">Beyond the plate </h2>
 
         <div className="space-y-3">

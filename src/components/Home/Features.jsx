@@ -25,7 +25,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="space-y-12  py-20 pb-24">
+    <section className="space-y-12 border-b border-b-neutral-300 py-20 pb-24">
       <h2 className="text-preset-2 text-center">What you'll get</h2>
       <ul className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-0">
         {features.map((feature) => (

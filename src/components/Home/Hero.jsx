@@ -1,4 +1,5 @@
-import Image from "../common/Image";
+import { Link } from "react-router";
+import Image from "../ui/Image";
 import Button from "../ui/Button";
 import heroImageLg from "/assets/images/image-home-hero-large.webp";
 import heroImageSm from "/assets/images/image-home-hero-small.webp";
@@ -20,7 +21,12 @@ export default function Hero() {
             tonight—no processed junk, no guesswork.
           </p>
         </div>
-        <Button>Start Exploring</Button>
+
+        <Button className="max-w-max">
+          <Link to="/recipes" viewTransition>
+            Start Exploring
+          </Link>
+        </Button>
       </div>
       <div className="rounded-12 border-neutral-0 bg-neutral-0 border-10">
         <Image

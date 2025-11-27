@@ -1,8 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 import RootLayout from "../layouts/RootLayout";
 import Home from "../pages/Home";
-import Recipes from "../pages/Recipes";
 import About from "../pages/About";
+import RecipesPage from "../pages/RecipesPage";
+import RecipeDetails from "../components/RecipesPage/RecipeDetails";
+import ScrollToTop from "../components/common/ScrollToTop";
 
 export default function AppRouter() {
   const router = createBrowserRouter([
@@ -12,7 +14,14 @@ export default function AppRouter() {
       children: [
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
-        { path: "recipes", element: <Recipes /> },
+        {
+          path: "recipes",
+          element: <RecipesPage />,
+        },
+        {
+          path: "/recipes/:recipeId",
+          element: <RecipeDetails />,
+        },
       ],
     },
   ]);

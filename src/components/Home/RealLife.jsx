@@ -1,4 +1,4 @@
-import Image from "../common/Image";
+import Image from "../ui/Image";
 import prepareGreensLarge from "/assets/images/image-home-real-life-large.webp";
 import prepareGreensSmall from "/assets/images/image-home-real-life-small.webp";
 

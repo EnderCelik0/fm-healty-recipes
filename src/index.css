@@ -54,7 +54,27 @@
   --radius-24: 24px;
   --radius-full: 999px;
 
-  --drop-shadow-btn: 0 35px 35px #000;
+  --animate-scale: scale 200ms ease-in-out;
+  @keyframes scale {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(100%);
+    }
+  }
+
+  --animate-fadeIn: fadeIn 400ms ease-in-out;
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 100;
+    }
+  }
 }
 
 @layer components {

@@ -1,7 +1,14 @@
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import Button from "../ui/Button";
+import hamburgerMenu from "/assets/images/icon-hamburger-menu.svg";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpen((prev) => !prev);
+  }
   const links = [
     {
       id: 1,
@@ -21,10 +28,12 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bottom-b border border-neutral-300">
-      <div className="bottom-b-1 flex items-center justify-between px-15 py-5">
-        <img src="/assets/images/logo.svg" alt="brand-website-logo" />
-        <ul className="flex gap-10">
+    <nav>
+      <div className="bottom-b bottom-b-1 relative flex items-center justify-between border border-neutral-300 px-15 py-5">
+        <NavLink to="/" className="shrink-0" viewTransition>
+          <img src="/assets/images/logo.svg" alt="brand-website-logo" />
+        </NavLink>
+        <ul className="hidden gap-10 md:flex">
           {links.map(({ id, name, to }) => (
             <li key={id} className="relative">
               <NavLink
@@ -32,17 +41,53 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   // create orange underline if nav link is active
                   isActive
-                    ? "before:rounded-10 transition-transform duration-200 before:absolute before:-bottom-2 before:left-0 before:h-1 before:w-full before:bg-orange-500"
+                    ? "before:rounded-10 before:animate-scale duration-200 before:absolute before:-bottom-2 before:left-0 before:h-1 before:w-full before:bg-orange-500 before:transition-all"
                     : ""
                 }
+                viewTransition
               >
                 {name}
               </NavLink>
             </li>
           ))}
         </ul>
-        <Button>Browse Recipes</Button>
+        <NavLink to="/recipes" viewTransition className="hidden md:block">
+          <Button>Browse Recipes</Button>
+        </NavLink>
+
+        {/* Hamburger Menu Icon */}
+        <button
+          onClick={toggleMenu}
+          className="rounded-4 block shrink-0 cursor-pointer bg-neutral-200 p-2 text-neutral-900 transition-colors duration-200 hover:bg-neutral-300 md:hidden"
+        >
+          <img
+            src={hamburgerMenu}
+            alt="mobile menu button w-10 aspect-square"
+          />
+        </button>
       </div>
+      {/* Mobile Navbar */}
+      {isMenuOpen && (
+        <div className="rounded-8 animate-fadeIn absolute top-18 left-[calc(10%-1rem)] flex w-[630px] flex-col gap-4 bg-neutral-200 p-2 md:hidden">
+          <ul className="flex w-full flex-col gap-4">
+            {links.map((link) => (
+              <NavLink
+                viewTransition
+                to={link.to}
+                key={link.id}
+                className="text-preset-7"
+              >
+                {link.name}
+              </NavLink>
+            ))}
+            <li className="w-full">
+              <NavLink viewTransition to="/recipes">
+                <Button>Browse Recipes</Button>
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }

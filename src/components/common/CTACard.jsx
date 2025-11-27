@@ -1,6 +1,7 @@
 import Button from "../ui/Button";
 import knife from "/assets/images/pattern-knife.svg";
 import fork from "/assets/images/pattern-fork.svg";
+import { Link } from "react-router";
 
 export default function CTACard() {
   return (
@@ -12,7 +13,11 @@ export default function CTACard() {
             Hit the button, pick a recipe, and get dinner on the table—fast.
           </p>
         </div>
-        <Button className="z-10">Browse Recipes</Button>
+        <Button className="z-10 max-w-max">
+          <Link to="/recipes" viewTransition>
+            Browse Recipes
+          </Link>
+        </Button>
       </div>
 
       <img

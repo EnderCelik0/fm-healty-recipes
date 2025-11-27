@@ -12,5 +12,5 @@ export default function About() {
       <BeyondPlate />
       <CTACard />
     </div>
-  );
+);
 }

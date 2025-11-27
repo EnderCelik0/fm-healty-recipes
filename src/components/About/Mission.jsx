@@ -1,4 +1,4 @@
-import Image from "../common/Image";
+import Image from "../ui/Image";
 import ourMissionLg from "/assets/images/image-about-our-mission-large.webp";
 import ourMissionSm from "/assets/images/image-about-our-mission-small.webp";
 

@@ -5,7 +5,7 @@ import RealLife from "../components/Home/RealLife";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Hero />
       <Features />
       <RealLife />
