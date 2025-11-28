@@ -40,7 +40,7 @@ function RecipeDetail() {
           { src: recipe.image.small, width: 343 },
         ]}
         sizes="100vw"
-        className="rounded-16 aspect-square max-h-[700px]"
+        className="rounded-16 aspect-square max-h-[700px] md:max-h-[580px]"
       />
 
       <div className="flex flex-col gap-5">

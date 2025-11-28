@@ -4,7 +4,8 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import RecipesPage from "../pages/RecipesPage";
 import RecipeDetails from "../components/RecipesPage/RecipeDetails";
-import ScrollToTop from "../components/common/ScrollToTop";
+import Recipes from "../components/RecipesPage/Recipes";
+import RecipesLayout from "../layouts/RecipesLayout";
 
 export default function AppRouter() {
   const router = createBrowserRouter([
@@ -18,10 +19,14 @@ export default function AppRouter() {
           path: "recipes",
           element: <RecipesPage />,
         },
-        {
-          path: "/recipes/:recipeId",
-          element: <RecipeDetails />,
-        },
+      ],
+    },
+    {
+      path: "/recipes",
+      element: <RecipesLayout />,
+      children: [
+        { index: true, element: <Recipes /> },
+        { path: "/recipes/:recipeId", element: <RecipeDetails /> },
       ],
     },
   ]);

@@ -22,13 +22,11 @@ export default function Hero() {
           </p>
         </div>
 
-        <Button className="max-w-max">
-          <Link to="/recipes" viewTransition>
-            Start Exploring
-          </Link>
-        </Button>
+        <Link to="/recipes" viewTransition>
+          <Button className="max-w-max">Start Exploring</Button>
+        </Link>
       </div>
-      <div className="rounded-12 border-neutral-0 bg-neutral-0 border-10">
+      <div className="rounded-12 border-neutral-0 bg-neutral-0 relative border-10">
         <Image
           variants={[
             { src: heroImageSm, width: 606 },

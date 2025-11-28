@@ -13,11 +13,9 @@ export default function CTACard() {
             Hit the button, pick a recipe, and get dinner on the table—fast.
           </p>
         </div>
-        <Button className="z-10 max-w-max">
-          <Link to="/recipes" viewTransition>
-            Browse Recipes
-          </Link>
-        </Button>
+        <Link to="/recipes" viewTransition>
+          <Button className="z-10 max-w-max">Browse Recipes</Button>
+        </Link>
       </div>
 
       <img

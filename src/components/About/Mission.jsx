@@ -1,6 +1,7 @@
 import Image from "../ui/Image";
 import ourMissionLg from "/assets/images/image-about-our-mission-large.webp";
 import ourMissionSm from "/assets/images/image-about-our-mission-small.webp";
+import aboutSquiggle from "/assets/images/pattern-squiggle-2.svg";
 
 export default function Mission() {
   return (
@@ -27,17 +28,23 @@ export default function Mission() {
         </div>
       </div>
       <div className="relative">
-        <Image
-          variants={[
-            { src: ourMissionSm, width: 606 },
-            { src: ourMissionLg, width: 1068 },
-          ]}
-          sizes={"100vw"}
-          alt="preparing vegetables"
-          className="rounded-10"
+        <div>
+          <Image
+            variants={[
+              { src: ourMissionSm, width: 606 },
+              { src: ourMissionLg, width: 1068 },
+            ]}
+            sizes={"100vw"}
+            alt="preparing vegetables"
+            className="rounded-10"
+          />
+        </div>
+        <img
+          src={aboutSquiggle}
+          className="absolute -right-18 bottom-27 hidden md:block"
+          alt="about section squiggle icon"
         />
       </div>
-      <img src className="absolute" alt="" />
     </section>
   );
 }
