@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="bottom-b bottom-b-1 relative flex items-center justify-between border border-neutral-300 px-15 py-5">
+      <div className="bottom-b bottom-b-1 relative flex items-center justify-between border border-neutral-300 px-8 py-8 pb-5 lg:px-15 lg:py-5">
         <NavLink to="/" className="shrink-0" viewTransition>
           <img src="/assets/images/logo.svg" alt="brand-website-logo" />
         </NavLink>
@@ -68,7 +68,7 @@ export default function Navbar() {
       </div>
       {/* Mobile Navbar */}
       {isMenuOpen && (
-        <div className="rounded-8 animate-fadeIn absolute top-18 left-[calc(10%-1rem)] flex w-[630px] flex-col gap-4 bg-neutral-200 p-2 md:hidden">
+        <div className="rounded-8 animate-fadeIn bg-neutral-0 absolute top-20 left-8 z-20 w-[calc(100%-4rem)] flex-col gap-4 border border-neutral-200 p-2 md:hidden">
           <ul className="flex w-full flex-col gap-4">
             {links.map((link) => (
               <NavLink
